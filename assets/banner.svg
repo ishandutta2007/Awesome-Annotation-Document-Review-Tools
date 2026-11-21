@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#0d1117" />
+    </linearGradient>
+
+    <linearGradient id="primaryGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.07" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1" />
+      <circle cx="40" cy="40" r="1.5" fill="#ffffff" fill-opacity="0.08" />
+    </pattern>
+
+    <!-- Glowing Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="25" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="badgeGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .title-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 46px;
+      fill: #ffffff;
+      letter-spacing: -1px;
+    }
+    .subtitle-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      fill: #94a3b8;
+    }
+    .badge-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      fill: #e2e8f0;
+    }
+    .code-tag {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 13px;
+      fill: #38bdf8;
+    }
+
+    /* Subtle Smooth Dynamic Floating Animations */
+    @keyframes orbFloat1 {
+      0% { transform: translate(0px, 0px) scale(1); }
+      50% { transform: translate(35px, -25px) scale(1.1); }
+      100% { transform: translate(0px, 0px) scale(1); }
+    }
+    @keyframes orbFloat2 {
+      0% { transform: translate(0px, 0px) scale(1); }
+      50% { transform: translate(-30px, 20px) scale(1.15); }
+      100% { transform: translate(0px, 0px) scale(1); }
+    }
+    @keyframes cardFloat1 {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+      100% { transform: translateY(0px); }
+    }
+    @keyframes cardFloat2 {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(8px); }
+      100% { transform: translateY(0px); }
+    }
+    @keyframes highlightPulse {
+      0% { opacity: 0.35; }
+      50% { opacity: 0.75; }
+      100% { opacity: 0.35; }
+    }
+
+    .dynamic-orb-1 {
+      animation: orbFloat1 9s ease-in-out infinite;
+    }
+    .dynamic-orb-2 {
+      animation: orbFloat2 12s ease-in-out infinite;
+    }
+    .dynamic-card-1 {
+      animation: cardFloat1 6s ease-in-out infinite;
+    }
+    .dynamic-card-2 {
+      animation: cardFloat2 7s ease-in-out infinite;
+    }
+    .dynamic-highlight {
+      animation: highlightPulse 4s ease-in-out infinite;
+    }
+  </style>
+
+  <!-- Deep Background -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)" />
+  <rect width="100%" height="100%" fill="url(#grid)" />
+
+  <!-- Dynamic Glowing Orbs in Background -->
+  <g class="dynamic-orb-1">
+    <circle cx="220" cy="110" r="130" fill="#6366f1" fill-opacity="0.18" filter="url(#glow)" />
+  </g>
+  <g class="dynamic-orb-2">
+    <circle cx="980" cy="280" r="160" fill="#ec4899" fill-opacity="0.16" filter="url(#glow)" />
+    <circle cx="820" cy="130" r="110" fill="#06b6d4" fill-opacity="0.14" filter="url(#glow)" />
+  </g>
+
+  <!-- Decorative Interactive Review Cards in Background Right (stays behind text) -->
+  <g class="dynamic-card-1" transform="translate(860, 60)">
+    <!-- Document Card -->
+    <rect width="270" height="150" rx="14" fill="url(#cardGrad)" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1.5" />
+    <rect x="20" y="22" width="110" height="10" rx="5" fill="#38bdf8" fill-opacity="0.8" />
+    <rect x="20" y="44" width="220" height="8" rx="4" fill="#ffffff" fill-opacity="0.15" />
+    <!-- Dynamic Simulated Highlight on Doc -->
+    <rect class="dynamic-highlight" x="20" y="62" width="175" height="14" rx="4" fill="#fde047" fill-opacity="0.5" />
+    <rect x="20" y="65" width="165" height="8" rx="4" fill="#ffffff" fill-opacity="0.75" />
+    <rect x="20" y="86" width="200" height="8" rx="4" fill="#ffffff" fill-opacity="0.15" />
+    <rect x="20" y="104" width="140" height="8" rx="4" fill="#ffffff" fill-opacity="0.15" />
+    <!-- Review Status Pill -->
+    <rect x="180" y="18" width="70" height="20" rx="10" fill="#10b981" fill-opacity="0.25" stroke="#10b981" stroke-opacity="0.6" stroke-width="1" />
+    <text x="215" y="32" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#34d399">APPROVED</text>
+  </g>
+
+  <g class="dynamic-card-2" transform="translate(810, 220)">
+    <!-- Collaborative Annotation Bubble Card -->
+    <rect width="290" height="140" rx="14" fill="#1e293b" fill-opacity="0.88" stroke="#8b5cf6" stroke-opacity="0.4" stroke-width="1.5" filter="url(#badgeGlow)" />
+    <!-- Avatar -->
+    <circle cx="38" cy="40" r="16" fill="#8b5cf6" />
+    <text x="38" y="45" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">AI</text>
+    <!-- Comment header -->
+    <text x="66" y="36" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#f1f5f9">AI Agent Plan Review</text>
+    <text x="66" y="52" font-family="-apple-system, sans-serif" font-size="11" fill="#94a3b8">Inline diff markup &amp; audit passed</text>
+    <!-- Comment Body Tag -->
+    <rect x="24" y="74" width="242" height="42" rx="8" fill="#0f172a" fill-opacity="0.85" />
+    <text x="36" y="93" class="code-tag">&gt; plannotator: 4 comments</text>
+    <text x="36" y="106" class="code-tag">&gt; status: 100% verified</text>
+  </g>
+
+  <!-- Foreground Content: Unobscured Crisp Typography -->
+  <g transform="translate(80, 0)">
+    <!-- Category Subheading Pill -->
+    <g transform="translate(0, 75)">
+      <rect width="365" height="34" rx="17" fill="#6366f1" fill-opacity="0.15" stroke="#818cf8" stroke-opacity="0.35" stroke-width="1" />
+      <circle cx="18" cy="17" r="5" fill="#34d399" />
+      <text x="32" y="22" class="badge-text" fill="#c7d2fe">CURATED DIRECTORY &amp; ECOSYSTEM</text>
+    </g>
+
+    <!-- Main Title (Gradient Fill + Foreground Stance) -->
+    <g transform="translate(0, 160)">
+      <text class="title-text" x="0" y="0">Awesome Annotation &amp;</text>
+      <text class="title-text" x="0" y="54" fill="url(#primaryGlow)">Document Review Tools</text>
+    </g>
+
+    <!-- Subtitle / Tagline -->
+    <g transform="translate(0, 255)">
+      <text class="subtitle-text" x="0" y="0">Top SaaS Platforms, Open-Source PDF Highlighters &amp; AI Plan Markup</text>
+      <text class="subtitle-text" x="0" y="28" font-size="16" fill="#64748b">W3C Web Annotation • Real-Time Collaboration • Local-First Developer Tools</text>
+    </g>
+
+    <!-- Feature Pills in Foreground -->
+    <g transform="translate(0, 325)">
+      <!-- Pill 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="135" height="34" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2" />
+        <text x="18" y="21" class="badge-text">📑 PDF Markup</text>
+      </g>
+      <!-- Pill 2 -->
+      <g transform="translate(147, 0)">
+        <rect width="150" height="34" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2" />
+        <text x="18" y="21" class="badge-text">🌐 Web Highlighters</text>
+      </g>
+      <!-- Pill 3 -->
+      <g transform="translate(309, 0)">
+        <rect width="150" height="34" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2" />
+        <text x="18" y="21" class="badge-text">🤖 AI Agent Plans</text>
+      </g>
+      <!-- Pill 4 -->
+      <g transform="translate(471, 0)">
+        <rect width="145" height="34" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2" />
+        <text x="18" y="21" class="badge-text">👥 Team Review</text>
+      </g>
+      <!-- Pill 5 -->
+      <g transform="translate(628, 0)">
+        <rect width="135" height="34" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2" />
+        <text x="18" y="21" class="badge-text">⚡ Open Source</text>
+      </g>
+    </g>
+  </g>
+</svg>
