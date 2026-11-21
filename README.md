@@ -64,9 +64,9 @@ The following SaaS and cloud-hosted platforms provide web, PDF, image, and docum
 
 Explore the leading self-hosted, privacy-first, and protocol-compliant open-source repositories for document review, PDF editing, and AI plan markup. 
 
-The list below is **sorted in descending order by GitHub Stars ⭐**. Each star badge links directly to that repository's official stargazers page.
+The list below is **sorted in descending order by GitHub_Stars ⭐**. Each Stars_Badge links directly to that repository's official stargazers page.
 
-| 📦 Repository & Link | ⭐ GitHub Stars | 🔍 Category | 📄 Description & Architecture |
+| 📦 Repository & Link | ⭐ GitHub_Stars | 🔍 Category | 📄 Description & Architecture |
 | :--- | :---: | :--- | :--- |
 | **[Stirling-Tools/Stirling-PDF](https://github.com/Stirling-Tools/Stirling-PDF)** | [![Stirling-PDF Stars](https://img.shields.io/github/stars/Stirling-Tools/Stirling-PDF?style=social&color=white)](https://github.com/Stirling-Tools/Stirling-PDF/stargazers) | Self-Hosted PDF Suite | Powerful, locally hosted Docker web application for editing, annotating, splitting, merging, redacting, and signing PDFs without cloud leaks. |
 | **[mozilla/pdf.js](https://github.com/mozilla/pdf.js)** | [![pdf.js Stars](https://img.shields.io/github/stars/mozilla/pdf.js?style=social&color=white)](https://github.com/mozilla/pdf.js/stargazers) | PDF Engine & Viewer | Mozilla's foundational HTML5/JavaScript PDF viewer and rendering library with native freehand drawing, text highlighting, and annotation layers. |
@@ -115,7 +115,7 @@ Contributions are welcome! Help us keep this directory up-to-date with new SaaS 
 2. 🌿 **Create a branch** for your feature or tool addition: `git checkout -b add-tool-name`.
 3. ✏️ **Edit `README.md`**:
    - For SaaS tools: include starting tier price, free tier/trial limits, and company scale (ARR / valuation).
-   - For Open-Source tools: include GitHub stars badge (`style=social&color=white` linking to `/stargazers`), category, and architecture summary.
+   - For Open-Source tools: include GitHub_Stars_Badge (`style=social&color=white` linking to `/stargazers`), category, and architecture summary.
 4. 🚀 **Submit a Pull Request** with a concise description of why the tool is a valuable addition.
 
 ---
